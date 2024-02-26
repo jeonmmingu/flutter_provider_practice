@@ -15,7 +15,7 @@ class Home extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Provider Basic"),
+        title: const Text("Provider Basic !"),
       ),
       body: const CountHomeWidget(),
       floatingActionButton: Row(
