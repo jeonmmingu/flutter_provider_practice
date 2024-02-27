@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_provider_basic/view_model/count_provider.dart';
 import 'package:provider/provider.dart';
 
-class CountHomeWidget extends StatelessWidget {
-  const CountHomeWidget({Key? key}) : super(key: key);
+class CountWidget extends StatelessWidget {
+  const CountWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
