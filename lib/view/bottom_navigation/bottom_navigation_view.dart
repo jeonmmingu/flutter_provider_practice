@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_provider_basic/view/count/count_view.dart';
 import 'package:flutter_provider_basic/view_model/bottom_navigation_provider.dart';
+import 'package:flutter_provider_basic/view_model/count_provider.dart';
 import 'package:provider/provider.dart';
 
 // ignore: must_be_immutable
@@ -14,7 +15,10 @@ class BottomNavigationView extends StatelessWidget {
     // switch를 통해 currentPage에 따라 네비게이션을 구동시킨다.
     switch (_bottomNavigationProvider.currentPage) {
       case 0:
-        return CountView();
+        return ChangeNotifierProvider(
+          create: (BuildContext context) => CountProvider(),
+          child: CountView(),
+        );
 
       case 1:
         return ListView();

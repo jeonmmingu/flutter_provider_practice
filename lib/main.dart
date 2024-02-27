@@ -17,15 +17,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MultiProvider(
-        providers: [
-          ChangeNotifierProvider(
-            create: (BuildContext context) => CountProvider(),
-          ),
-          ChangeNotifierProvider(
-            create: (BuildContext context) => BottomNavigationProvider(),
-          ),
-        ],
+      home: ChangeNotifierProvider(
+        create: (BuildContext context) => BottomNavigationProvider(),
         child: BottomNavigationView(),
       ),
     );
